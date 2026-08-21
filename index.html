@@ -134,10 +134,10 @@
     }
 
     .flag {
-      font-size: 30px;
       width: 48px;
+      height: 40px;
       flex-shrink: 0;
-      text-align: center;
+      object-fit: contain;
       margin-right: 10px;
     }
 
@@ -164,21 +164,51 @@
       box-shadow: 0 2px 7px rgba(55, 11, 40, 0.08);
     }
 
-    .info {
+    .downloads {
       margin-top: 24px;
-      padding: 17px 18px;
+      padding: 15px 18px;
       border-radius: 18px;
 
-      background: #f7f7f7;
-      border-left: 5px solid var(--red);
+      background: #fbfbfb;
+      border: 1px solid var(--border);
 
-      color: #5d555b;
-      font-size: 14px;
+      color: var(--muted);
+      font-size: 13px;
       line-height: 1.55;
     }
 
-    .info strong {
+    .downloads strong {
+      display: block;
+      margin-bottom: 9px;
       color: var(--plum);
+    }
+
+    .dl-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .dl-list a {
+      padding: 9px 14px;
+      border-radius: 999px;
+
+      background: white;
+      border: 1px solid var(--border);
+
+      color: var(--plum);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+
+      transition: border-color 0.15s ease, color 0.15s ease;
+    }
+
+    .dl-list a:hover,
+    .dl-list a:focus {
+      border-color: var(--red);
+      color: var(--red);
+      outline: none;
     }
 
     .footer {
@@ -240,57 +270,65 @@
 
       <div class="language-list">
 
-        <a class="language" href="Deutsch.png">
-          <span class="flag">🇩🇪</span>
+        <a class="language" href="km-de.webp">
+          <img class="flag" src="flag-de.webp" alt="" width="48" height="40">
           <span class="language-name">Deutsch</span>
           <span class="arrow">›</span>
         </a>
 
-        <a class="language" href="Englisch.png">
-          <span class="flag">🇬🇧</span>
+        <a class="language" href="km-en.webp">
+          <img class="flag" src="flag-en.webp" alt="" width="48" height="40">
           <span class="language-name">English</span>
           <span class="arrow">›</span>
         </a>
 
-        <a class="language" href="Türkisch.png">
-          <span class="flag">🇹🇷</span>
+        <a class="language" href="km-tr.webp">
+          <img class="flag" src="flag-tr.webp" alt="" width="48" height="40">
           <span class="language-name">Türkçe</span>
           <span class="arrow">›</span>
         </a>
 
-        <a class="language" href="Kroatisch.png">
-          <span class="flag">🇭🇷</span>
+        <a class="language" href="km-hr.webp">
+          <img class="flag" src="flag-hr.webp" alt="" width="48" height="40">
           <span class="language-name">Hrvatski</span>
           <span class="arrow">›</span>
         </a>
 
-        <a class="language" href="Italienisch.png">
-          <span class="flag">🇮🇹</span>
+        <a class="language" href="km-it.webp">
+          <img class="flag" src="flag-it.webp" alt="" width="48" height="40">
           <span class="language-name">Italiano</span>
           <span class="arrow">›</span>
         </a>
 
-        <a class="language" href="Russisch.png">
-          <span class="flag">🇷🇺</span>
+        <a class="language" href="km-ru.webp">
+          <img class="flag" src="flag-ru.webp" alt="" width="48" height="40">
           <span class="language-name">Русский</span>
           <span class="arrow">›</span>
         </a>
 
-        <a class="language" href="Rumänisch.png">
-          <span class="flag">🇷🇴</span>
+        <a class="language" href="km-ro.webp">
+          <img class="flag" src="flag-ro.webp" alt="" width="48" height="40">
           <span class="language-name">Română</span>
           <span class="arrow">›</span>
         </a>
 
       </div>
 
-      <div class="info">
-        <strong>Hinweis:</strong>
-        Tippe auf deine Sprache, um die Anleitung zur Krankmeldung zu öffnen.
+      <div class="downloads">
+        <strong>Download (JPEG)</strong>
+        <div class="dl-list">
+          <a href="km-de.jpg" download>Deutsch</a>
+          <a href="km-en.jpg" download>English</a>
+          <a href="km-tr.jpg" download>Türkçe</a>
+          <a href="km-hr.jpg" download>Hrvatski</a>
+          <a href="km-it.jpg" download>Italiano</a>
+          <a href="km-ru.jpg" download>Русский</a>
+          <a href="km-ro.jpg" download>Română</a>
+        </div>
       </div>
 
       <div class="footer">
-        Kläger Group
+        Kläger Group – intern
       </div>
 
     </section>
